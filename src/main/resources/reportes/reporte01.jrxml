@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte01" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cdb83cc4-8bf4-4c0b-aacd-846af2321211">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT id,
+	descripcion
+FROM tbl_departamentos]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_departamentos"/>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="descripcion"/>
+		<property name="com.jaspersoft.studio.field.label" value="descripcion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_departamentos"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="0" width="540" height="79" backcolor="#465994" uuid="8a008d8e-efc7-4af5-96b0-d5f7b6ebea11"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="190" y="32" width="230" height="15" uuid="97f0c855-be72-4672-9c22-45ec0cf95cfc"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTA DE DEPARTAMENTOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="0" width="100" height="30" uuid="fadeb67a-e925-4f89-be39-b4c3fb1ae08f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="012efe09-d356-4392-9fe5-088f25d9b6cb"/>
+				</reportElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="164" y="0" width="100" height="30" uuid="5a2df5ee-c9b8-47f7-8d64-ac1cbed1643d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6730814-c2c4-4938-b5b6-e5961b9c6303"/>
+				</reportElement>
+				<text><![CDATA[descripcion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="20" y="0" width="100" height="30" uuid="2dee6e1a-8ba3-4c24-a338-0f37e3e6f7e0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="012efe09-d356-4392-9fe5-088f25d9b6cb"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="0" width="100" height="30" uuid="ef826fdf-1a78-416a-b523-3411b4eb93fb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6730814-c2c4-4938-b5b6-e5961b9c6303"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
